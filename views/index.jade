@@ -5,4 +5,22 @@ block content
   p#greeting Hello User
   button.enableEthereumButton Enable Ethereum
   p#warning
-  script(type="text/javascript", src='/static/javascripts/main.js')
+  h2 Relay Contract 
+  form(id='relayform', action='/relayform/viewcode')
+    fieldset
+      label(for='sender') Sender Address: 
+      input(id='sender', name='sender', type='string', value='', placeholder='address')
+    fieldset
+      label(for='receiver') Receiver Address: 
+      input(id='recipient', name='recipient', type='string', value='', placeholder='address')
+    fieldset
+      label(for='token') Token Address: 
+      input(id='token_address', name='token_address', type='string', value='', placeholder='address')
+    fieldset
+      label(for='amount') Amount: 
+      input(id='amount', name='amount', type='string', value='', placeholder='number')
+    fieldset
+      input(type='submit', value='Get Solidity Code')
+
+block scripts 
+  script(src='/static/javascripts/main.js')

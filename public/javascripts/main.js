@@ -4,6 +4,8 @@ const ethereumButton = document.querySelector('.enableEthereumButton');
 
 let hasWallet = (typeof ethereum !== 'undefined') ? true : false;
 
+console.log("test");
+
 ethereumButton.addEventListener('click', () => {
   
   (async () => {

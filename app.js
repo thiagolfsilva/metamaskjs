@@ -6,6 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var relayformRouter = require('./routes/relayform');
+const bodyParser = require('body-parser');
 
 var app = express();
 
@@ -23,6 +25,8 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/relayform', relayformRouter);
+app.use('/contracts', express.static(path.join(__dirname, 'contracts')))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
