@@ -17,5 +17,4 @@ Next steps include
 
 ## Running the code
 
-1. `$ npm init`
-2. `$ node app.js`
+`node app.js`
